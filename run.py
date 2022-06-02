@@ -28,7 +28,7 @@ from IPython.display import display
 known_face_encodings = []
 # Load a sample picture and learn how to recognize it.
 for i in train_files:
-    curr_image = face_recognition.load_image_file("/TrainSet/" + i)
+    curr_image = face_recognition.load_image_file(os.path.join(package_dir,'./TrainSet' + i))
     curr_face_encoding = face_recognition.face_encodings(curr_image)[0]
     known_face_encodings.append(curr_face_encoding)
 
