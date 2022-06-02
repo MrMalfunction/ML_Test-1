@@ -38,7 +38,7 @@ print('Learned encoding for', len(known_face_encodings), 'images.')
 
 ## block 4
 # Load an image with an unknown face
-unknown_image = face_recognition.load_image_file((os.path.join(package_dir,'./TrainSet/tom-hanks-will-smith.jpg')))
+unknown_image = face_recognition.load_image_file((os.path.join(package_dir,'/TrainSet/tom-hanks-will-smith.jpg')))
 
 face_locations = face_recognition.face_locations(unknown_image)
 face_encodings = face_recognition.face_encodings(unknown_image, face_locations)
