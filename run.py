@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw
 from IPython.display import display
 import os
-print(os.listdir('/work/TrainSet'))
+print(os.listdir('/TrainSet'))
 # The program we will be finding faces on the example below
 # pil_im = Image.open('/work/TrainSet/Man.jpg')
 # display(pil_im)
@@ -10,7 +10,7 @@ print(os.listdir('/work/TrainSet'))
 
 ## block 2
 
-train_files = os.listdir('/work/TrainSet')
+train_files = os.listdir('/TrainSet')
 train_names = []
 for i in train_files:
     train_names.append(i.split('.')[0])
@@ -36,7 +36,7 @@ print('Learned encoding for', len(known_face_encodings), 'images.')
 
 ## block 4
 # Load an image with an unknown face
-unknown_image = face_recognition.load_image_file("/work/TestSet/tom-hanks-will-smith.jpg")
+unknown_image = face_recognition.load_image_file("/TestSet/tom-hanks-will-smith.jpg")
 
 face_locations = face_recognition.face_locations(unknown_image)
 face_encodings = face_recognition.face_encodings(unknown_image, face_locations)
