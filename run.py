@@ -40,6 +40,7 @@ print('Learned encoding for', len(known_face_encodings), 'images.')
 # Load an image with an unknown face
 unknown_image = face_recognition.load_image_file((os.path.join(package_dir,'./TrainSet'))
 
+face_locations = face_recognition.face_locations(unknown_image)
 face_encodings = face_recognition.face_encodings(unknown_image, face_locations)
 
 pil_image = Image.fromarray(unknown_image)
